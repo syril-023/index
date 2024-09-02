@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <title>Student Complaint Management</title>
+  </head>
+  <body>
+    <div class="container border align-item-center">
+      <form action="#" id="todoform">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" required>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" required>
+
+        <button type="button" onclick="addToList()">Add to List</button>        
+      </form>
+      <ul id="todolist"></ul>
+    </div>
+  </body>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript">
+    const todoList =document.getElementById('todolist');
+
+    function addToList(){
+      const name =document.getElementById('name').value;
+      const age =document.getElementById('age').value;
+      const dob =document.getElementById('dob').value;
+
+      const li =document.createElement('todolist');
+      li.textContent ="Name:${name}, Age:${age}, Dob:${dob}";
+    }
+  </script>
+  </script>
+</html>
